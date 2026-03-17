@@ -1,0 +1,5 @@
+1_
+
+The %p format specifier in printf :
+is used to print the value of a pointer (a memory address) in an implementation-defined format, 
+typically hexadecimal notation.
