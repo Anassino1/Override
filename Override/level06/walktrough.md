@@ -31,7 +31,7 @@ auth(login, serial) == 0 → shell
 if (auth(login, serial) == 0)
     system("/bin/sh");
 
-So your objective is:
+So our objective is:
 
 Make auth() return 0
 

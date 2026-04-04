@@ -21,6 +21,9 @@ decrypt()
 
     The constant 0x1337d00d (decimal 322424845)
 
+       0x080488ca <+112>:	movl   $0x1337d00d,0x4(%esp)
+
+
 3) test(int input, int value)
 
 Calculates the difference:
