@@ -1,4 +1,4 @@
-Level04
+Level04   (ret2libc attack)
 -------
 
 1) Understanding the program behavior
@@ -111,7 +111,7 @@ Mapped address spaces:
 	 0x8049000  0x804a000     0x1000        0x0 /home/users/level04/level04
 	 0x804a000  0x804b000     0x1000     0x1000 /home/users/level04/level04
 	0xf7e2b000 0xf7e2c000     0x1000        0x0 
-	0xf7e2c000 0xf7fcc000   0x1a0000        0x0 /lib32/libc-2.15.so
+	0xf7e2c000 0xf7fcc000   0x1a0000        0x0 /lib32/libc-2.15.so    (line contains the functions)
 	0xf7fcc000 0xf7fcd000     0x1000   0x1a0000 /lib32/libc-2.15.so
 	0xf7fcd000 0xf7fcf000     0x2000   0x1a0000 /lib32/libc-2.15.so
 	0xf7fcf000 0xf7fd0000     0x1000   0x1a2000 /lib32/libc-2.15.so
@@ -133,7 +133,7 @@ Searching inside libc:
 
 8) Building the payload
 
-[ padding (156 bytes) ]
+[ padding (156 bytes) ]kgv3tkEb9h2mLkRsPkXRfc2mHbjMxQzvb2FrgKkf
 [ system address ]
 [ return address → exit ]
 [ argument → "/bin/sh" ]
