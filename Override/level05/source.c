@@ -19,6 +19,6 @@ int main(void)
         i++;
     }
 
-    printf(buffer);   // ⚠️ VULNERABILITY
+    printf(buffer);   //  VULNERABILITY
     exit(0);
 }

@@ -64,7 +64,7 @@ int store_number(unsigned int *buffer)
     printf(" Index: ");
     scanf("%u", &index);
 
-    // ❌ restriction 1
+    //  restriction 1
     if (index % 3 == 0)
     {
         printf(" *** ERROR! ***\n");
@@ -73,7 +73,7 @@ int store_number(unsigned int *buffer)
         return 1;
     }
 
-    // ❌ restriction 2
+    //  restriction 2
     if ((value >> 24) == 0xb7)
     {
         printf(" *** ERROR! ***\n");
